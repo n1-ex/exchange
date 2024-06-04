@@ -1,0 +1,239 @@
+/* Exchange Gates */
+.exchange-gates .col-in,
+.exchange-gates .col-out,
+.exchange-gates .col-reserve {
+    float: left;
+}
+.exchange-gates .col-in {
+    width: 33%;
+}
+.exchange-gates .col-out {
+    width: 48%;
+    margin-left: -4px;
+}
+.exchange-gates .col-reserve {
+    width: 19%;
+}
+
+.exchange-gates h2 {
+    max-width: 250px;
+    margin-bottom: 15px;
+    border-color: #ffc600;
+}
+.exchange-gates .col-in h2 {
+    background: url(/assets/frontend/img/icon-in.png) right top no-repeat;
+}
+.exchange-gates .col-out h2 {
+    margin-left: 47px;
+    background: url(/assets/frontend/img/icon-out.png) right top no-repeat;
+}
+.exchange-gates .col-reserve h2 {
+    background: url(/assets/frontend/img/icon-reserve.png) right top no-repeat;
+    /*margin-bottom: 101px;*/
+}
+.exchange-gates .currency-filter {
+    margin-right: 22px;
+    padding: 0 7px 9px 10px;
+}
+.col-out .currency-filter {
+    margin: 0 96px 0 47px;
+    padding: 0 8px 10px;
+}
+.exchange-gates .row-payment {
+    position: relative;
+    line-height: 22px;
+    line-height: 26px;
+    padding: 8px 10px 6px 10px;
+    margin-bottom: 1px;
+    cursor: pointer;
+    height: 36px;
+    overflow: hidden;
+}
+.exchange-gates .row-payment.disabled {
+    cursor: auto;
+    color: silver;
+}
+.exchange-gates .row-payment.disabled img {
+    filter: grayscale(100%);
+}
+.exchange-gates .row-payment .amount {
+    padding-right: 10px;
+    text-overflow: ellipsis;
+}
+.exchange-gates .row-payment .name {
+    padding-left: 10px;
+    font-weight: 400;
+}
+.exchange-gates .col-in .row-payment.active {
+    /*background: url(/assets/frontend/img/bg_arrow_1.png) right center no-repeat;*/
+    background-size: 100% 100%;
+    background-color: rgba(204, 163, 84, 0.3);
+}
+.exchange-gates .col-out .row-payment.active {
+    /*background: url(/assets/frontend/img/bg_arrow_2.png) right center no-repeat;*/
+    background-size: 100% 100%;
+    background-color: rgba(204, 163, 84, 0.3);
+}
+.exchange-gates .col-out .row-payment.disabled {
+    background: none;
+}
+
+.exchange-gates .col-out .row-payment:hover {
+    background-color: rgba(204, 163, 84, 0.3);
+}
+
+.exchange-gates .col-out .row-payment {
+    padding-left: 55px;
+    padding-left: 25px;
+}
+.exchange-gates .col-in .row-payment .amount {
+    display: inline-block;
+    width: 65px;
+    width: 25px;
+}
+.exchange-gates .col-out .row-payment .amount {
+    display: inline-block;
+    width: 80px;
+    width: 130px;
+    text-align: right;
+}
+.exchange-gates .col-reserve .row-payment a {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding-left: 30px;
+    border-radius: 3px;
+    background: #ffc600 url(/assets/frontend/img/icon-exchange.png) 88% center no-repeat;
+    color: #fff;
+    line-height: 36px;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: bolder;
+    opacity: 0;
+}
+.exchange-gates .col-reserve .row-payment.active a {
+    opacity: 1;
+}
+.exchange-gates .col-reserve .row-payment.disabled a {
+    display: none;
+}
+
+.exchange-gate-info {
+    height: 50px;
+}
+
+@media screen and (max-width: 1199px) {
+    .container {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 1158px) and (min-width: 991px) {
+    .exchange-gates .col-reserve h2 {
+        /*margin-bottom: 139px;*/
+    }
+}
+
+@media screen and (max-width: 869px) {
+    .exchange-gates .col-reserve h2 {
+        /*margin-bottom: 139px;*/
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .exchange-gates .col-in,
+    .exchange-gates .col-out,
+    .exchange-gates .col-reserve {
+        width: 100%;
+        margin-left: 0;
+        margin-bottom: 30px;
+    }
+    .exchange-gates .col-in h2,
+    .exchange-gates .col-out h2,
+    .exchange-gates .col-reserve h2 {
+        max-width: 100%;
+        margin-left: 0;
+    }
+    .exchange-gates .col-out .row-payment {
+        padding-left: 10px;
+    }
+    .exchange-gates .col-in .row-payment.active {
+        background: #ffeeb3;
+    }
+    .exchange-gates .col-out .row-payment.active {
+        background: #f0f0ed;
+    }
+    .exchange-gates .col-reserve .row-payment.active a {
+        background-position: 105px center;
+    }
+    .exchange-gates .col-reserve h2 {
+        margin-bottom: 10px;
+    }
+    .exchange-gates .currency-filter {
+        margin: 0 22px 0 0;
+        padding: 0 7px 9px 10px;
+    }
+    .exchange-gates .col-out .row-payment .amount {
+        display: inline-block;
+        width: 65px;
+        width: 125px;
+        text-align: left;
+    }
+}
+
+/* Exchange Rates */
+.exchange-rates .nav {
+    margin-bottom: 15px;
+}
+.exchange-rates .nav-codes > li > a, .exchange-gates .currency-filter > li > a {
+    margin: 0 5px;
+    padding: 0 10px;
+    border: 1px solid #e9e9e5;
+    border-radius: 3px;
+    background: url(/public/assets/frontend/img/tab_code_not_active.png) 90% center no-repeat;
+    text-align: left;
+    line-height: 30px;
+    color: #333;
+}
+.exchange-rates .nav-codes > li.active > a,
+.exchange-rates .nav-codes > li > a:hover,
+.exchange-gates .currency-filter > li.active > a,
+.exchange-gates .currency-filter > li > a:hover {
+    background: url(/public/assets/frontend/img/tab_code_active.png) 90% center no-repeat;
+    border-color: #ffc600;
+}
+.exchange-gates .currency-filter > li > a {
+    margin-bottom: 6px;
+    min-width: 68px;
+    float: left;
+}
+.exchange-rates .line {
+    padding: 7px 0;
+    border-bottom: 1px solid #ebebe8;
+}
+.exchange-rates .line:last-child {
+    border-bottom-width: 0;
+}
+.exchange-rates .line span {
+    position: relative;
+}
+.exchange-rates .line .percent {
+    padding: 0 8px;
+    float: right;
+    border-radius: 3px;
+    line-height: 20px;
+    color: #fff;
+}
+.exchange-rates .line .percent.plus {
+    background-color: #a2d227;
+}
+.exchange-rates .line .percent.minus {
+    background-color: #d45133;
+}
+
+.exchange-gates .icon {
+    height: 19px;
+}
